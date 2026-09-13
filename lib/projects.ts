@@ -59,6 +59,16 @@ export const PROJECTS: Project[] = [
     accent: "#8B5CF6",
     image: "/projects/arcus/card.png",
   },
+  {
+    id: "choropoulos",
+    title: "Choropoulos Sound",
+    description:
+      "Website for a DJ in Agrinio — sound, light, and atmosphere. A steady place for the work, instead of another social feed.",
+    disciplines: ["software"],
+    tags: ["websites"],
+    accent: "#C9A36A",
+    image: "/projects/choropoulos/card.jpg",
+  },
 ];
 
 export function getProject(id: string): Project | undefined {
