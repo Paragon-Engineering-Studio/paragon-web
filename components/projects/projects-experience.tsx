@@ -31,6 +31,7 @@ export function ProjectsExperience({
         {header}
         <Reveal
           id="projects"
+          className="projects-main"
           style={{ padding: "80px 24px 120px", maxWidth: 1200, margin: "0 auto" }}
         >
           <div style={{ marginBottom: 48 }}>
@@ -90,7 +91,11 @@ export function ProjectsExperience({
             key={`${discipline}-${tag ?? "all"}`}
           >
             {visibleProjects.length === 0 ? (
-              <p className="project-empty">No projects match this filter.</p>
+              <p className="project-empty">
+                {PROJECTS.length === 0
+                  ? "Real projects will land here one by one."
+                  : "No projects match this filter."}
+              </p>
             ) : (
               <div className="project-grid">
                 {visibleProjects.map((project) => (

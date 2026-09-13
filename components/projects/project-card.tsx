@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import Link from "next/link";
 import { TAG_LABELS, type Project } from "@/lib/projects";
 
 function ThumbArt({ accent, title, id }: { accent: string; title: string; id: string }) {
@@ -68,9 +69,14 @@ function ThumbArt({ accent, title, id }: { accent: string; title: string; id: st
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="card-hover project-card">
+    <Link href={`/projects/${project.id}`} className="card-hover project-card">
       <div className="project-thumb">
-        <ThumbArt id={project.id} accent={project.accent} title={project.title} />
+        {project.image ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={project.image} alt="" className="project-thumb-img" />
+        ) : (
+          <ThumbArt id={project.id} accent={project.accent} title={project.title} />
+        )}
       </div>
       <div className="project-card-body">
         <h3 className="project-card-title">{project.title}</h3>
@@ -96,6 +102,6 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-    </article>
+    </Link>
   );
 }
