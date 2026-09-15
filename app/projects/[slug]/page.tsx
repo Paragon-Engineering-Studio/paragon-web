@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AdeonExperience } from "@/components/projects/adeon/adeon-experience";
 import { ArcusExperience } from "@/components/projects/arcus/arcus-experience";
 import { ChoropoulosExperience } from "@/components/projects/choropoulos/choropoulos-experience";
+import { TeachersLabExperience } from "@/components/projects/teacherslab/teacherslab-experience";
 import { Footer } from "@/components/home/footer";
 import { Navbar } from "@/components/home/navbar";
 import { SoftMist } from "@/components/soft-mist";
@@ -59,6 +60,8 @@ export default async function ProjectDetailPage({
           <ArcusExperience project={project} />
         ) : slug === "choropoulos" ? (
           <ChoropoulosExperience project={project} />
+        ) : slug === "teacherslab" ? (
+          <TeachersLabExperience project={project} />
         ) : (
           notFound()
         )}

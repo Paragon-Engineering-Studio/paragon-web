@@ -69,6 +69,16 @@ export const PROJECTS: Project[] = [
     accent: "#C9A36A",
     image: "/projects/choropoulos/card.jpg",
   },
+  {
+    id: "teacherslab",
+    title: "TeachersLab",
+    description:
+      "Website for teachers and parents — curated primary-education material, browsable by grade, with worksheets, stories, and DIY projects.",
+    disciplines: ["software"],
+    tags: ["websites"],
+    accent: "#7C3AED",
+    image: "/projects/teacherslab/card.jpg",
+  },
 ];
 
 export function getProject(id: string): Project | undefined {
