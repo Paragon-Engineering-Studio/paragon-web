@@ -53,24 +53,6 @@ function ConnectorLines() {
   );
 }
 
-const CORE_CARDS = [
-  {
-    icon: "⬡",
-    title: "Paragon Core",
-    desc: "Unified build system and project scaffold for every discipline.",
-  },
-  {
-    icon: "◈",
-    title: "Signal Layer",
-    desc: "Real-time data bus connecting firmware, PCB, and cloud services.",
-  },
-  {
-    icon: "◉",
-    title: "DevOps Bridge",
-    desc: "CI/CD pipeline that handles silicon, software, and deployment together.",
-  },
-];
-
 export function Infrastructure() {
   return (
     <Reveal
@@ -122,7 +104,7 @@ export function Infrastructure() {
             padding: "10px 22px",
             background: "rgba(255,255,255,0.04)",
             backdropFilter: "blur(8px)",
-            margin: "-8px auto 56px",
+            margin: "-8px auto 0",
             position: "relative",
             zIndex: 2,
           }}
@@ -131,45 +113,6 @@ export function Infrastructure() {
           <span style={{ fontSize: 13, fontWeight: 600, color: "#fff" }}>
             Powered by Paragon
           </span>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-            gap: 12,
-          }}
-        >
-          {CORE_CARDS.map((c) => (
-            <div
-              key={c.title}
-              className="card-hover"
-              style={{
-                padding: "22px 18px",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: 4,
-                background: "#0d0d0d",
-                textAlign: "left",
-              }}
-            >
-              <div
-                className="gradient-text"
-                style={{
-                  fontSize: 22,
-                  marginBottom: 12,
-                  filter: "drop-shadow(0 0 6px rgba(79,107,255,0.5))",
-                }}
-              >
-                {c.icon}
-              </div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 6 }}>
-                {c.title}
-              </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.38)", lineHeight: 1.6 }}>
-                {c.desc}
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </Reveal>

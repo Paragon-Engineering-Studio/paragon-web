@@ -5,8 +5,6 @@ import { CONTACTS } from "@/lib/contacts";
 const COLUMNS = [
   { h: "Company", links: [
     { l: "About", href: "/about" },
-    { l: "Careers", href: "#" },
-    { l: "Press", href: "#" },
     { l: "Contact", href: "/contact" },
   ] },
   { h: "Services", links: [
@@ -14,17 +12,6 @@ const COLUMNS = [
     { l: "Hardware", href: "/services#hardware" },
     { l: "Full-stack products", href: "/services#full-stack" },
     { l: "Legacy revival", href: "/services#revival" },
-  ] },
-  { h: "Resources", links: [
-    { l: "Docs", href: "#" },
-    { l: "Case Studies", href: "/projects" },
-    { l: "Blog", href: "#" },
-    { l: "Open Source", href: "#" },
-  ] },
-  { h: "Legal", links: [
-    { l: "Privacy", href: "#" },
-    { l: "Terms", href: "#" },
-    { l: "NDA Template", href: "#" },
   ] },
 ];
 
@@ -95,7 +82,7 @@ export function Footer() {
           }}
         >
           <span style={{ fontSize: 12, color: "rgba(255,255,255,0.2)" }}>
-            © {new Date().getFullYear()} Paragon Engineering LLC. All rights reserved.
+            © {new Date().getFullYear()} Paragon Engineering Studio. All rights reserved.
           </span>
           <div style={{ display: "flex", gap: 20 }}>
             {CONTACTS.filter((channel) => channel.footer).map((channel) => (

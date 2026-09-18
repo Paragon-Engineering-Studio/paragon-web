@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ParagonWordmark } from "@/components/brand/paragon-wordmark";
 import { NavLinks } from "@/components/home/nav-links";
+import { ProjectSearch } from "@/components/home/project-search";
 
 export function Navbar() {
   return (
@@ -61,57 +62,8 @@ export function Navbar() {
 
         <NavLinks />
 
-        <div style={{ display: "flex", alignItems: "center", gap: 10, marginLeft: 24 }}>
-          <div
-            className="nav-search"
-            style={{
-              alignItems: "center",
-              gap: 8,
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              padding: "5px 10px",
-              borderRadius: 4,
-            }}
-          >
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="rgba(255,255,255,0.3)"
-              strokeWidth="2"
-              aria-hidden
-            >
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
-            <span
-              style={{
-                fontSize: 12,
-                color: "rgba(255,255,255,0.2)",
-                fontFamily: "var(--font-mono)",
-              }}
-            >
-              Search...
-            </span>
-            <span
-              style={{
-                fontSize: 10,
-                color: "rgba(255,255,255,0.15)",
-                border: "1px solid rgba(255,255,255,0.1)",
-                borderRadius: 3,
-                padding: "1px 5px",
-              }}
-            >
-              ⌘K
-            </span>
-          </div>
-          <Link href="#" className="btn-outline">
-            Sign in
-          </Link>
-          <Link href="/#get-started" className="btn-solid">
-            Get started
-          </Link>
+        <div style={{ display: "flex", alignItems: "center", marginLeft: 24 }}>
+          <ProjectSearch />
         </div>
       </div>
       <div

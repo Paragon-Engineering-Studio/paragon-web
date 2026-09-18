@@ -11,10 +11,10 @@ export function ContactExperience() {
         <h1>
           Write us.
           <br />
-          Any channel.
+          Directly.
         </h1>
         <p className="services-hero-lead">
-          Email, WhatsApp, Instagram — pick the one you already use. We read all of them.
+          Email for a conversation, GitHub for the work — both go to the studio.
         </p>
       </Reveal>
 

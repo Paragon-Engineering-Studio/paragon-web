@@ -234,7 +234,7 @@ export function GetStarted() {
               ))}
             </div>
 
-            <Link href="#" className="btn-cta">
+            <Link href="/about" className="btn-cta">
               Start your project →
             </Link>
           </div>

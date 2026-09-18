@@ -1,7 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import {
   IconAutomation,
-  IconCloud,
   IconFirmware,
   IconMicro,
   IconPCB,
@@ -37,12 +36,6 @@ const FEATURES = [
     icon: <IconAutomation />,
     title: "Automation",
     desc: "Industrial PLC logic, SCADA integration, and workflow automation that eliminates manual overhead.",
-    accent: false,
-  },
-  {
-    icon: <IconCloud />,
-    title: "Systems & DevOps",
-    desc: "Cloud-native infrastructure, CI/CD pipelines, and monitoring for every layer of the stack.",
     accent: false,
   },
 ];

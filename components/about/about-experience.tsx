@@ -30,7 +30,7 @@ export function AboutExperience() {
           <p className="services-kicker">
             <span className="gradient-text">Contact</span>
           </p>
-          <ContactChannels compact />
+          <ContactChannels compact only={["email", "github"]} />
         </aside>
       </Reveal>
 

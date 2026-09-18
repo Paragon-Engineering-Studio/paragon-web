@@ -7,49 +7,33 @@ export type ContactChannel = {
   footer?: boolean;
 };
 
+export const EMAIL_ADDRESS = "info@paragon-engineering";
+
+export function mailtoHref(
+  address: string,
+  options?: { subject?: string; body?: string },
+): string {
+  const params = new URLSearchParams();
+  if (options?.subject) params.set("subject", options.subject);
+  if (options?.body) params.set("body", options.body);
+  const query = params.toString();
+  return `mailto:${address}${query ? `?${query}` : ""}`;
+}
+
 export const CONTACTS: ContactChannel[] = [
   {
     id: "email",
     label: "Email",
-    value: "hello@paragon.engineering",
-    href: "mailto:hello@paragon.engineering",
-  },
-  {
-    id: "whatsapp",
-    label: "WhatsApp",
-    value: "Message the studio",
-    href: "https://wa.me/",
-    external: true,
-  },
-  {
-    id: "instagram",
-    label: "Instagram",
-    value: "@paragon.engineering",
-    href: "https://instagram.com/paragon.engineering",
-    external: true,
-    footer: true,
-  },
-  {
-    id: "linkedin",
-    label: "LinkedIn",
-    value: "PARAGON",
-    href: "https://www.linkedin.com/",
-    external: true,
-    footer: true,
+    value: EMAIL_ADDRESS,
+    href: mailtoHref(EMAIL_ADDRESS, {
+      subject: "Message for PARAGON",
+    }),
   },
   {
     id: "github",
     label: "GitHub",
-    value: "github.com/paragon",
-    href: "https://github.com/paragon",
-    external: true,
-    footer: true,
-  },
-  {
-    id: "x",
-    label: "X",
-    value: "@paragon",
-    href: "https://x.com/paragon",
+    value: "Paragon-Engineering-Studio",
+    href: "https://github.com/Paragon-Engineering-Studio",
     external: true,
     footer: true,
   },

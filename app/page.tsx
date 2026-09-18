@@ -3,7 +3,6 @@ import { Footer } from "@/components/home/footer";
 import { GetStarted } from "@/components/home/get-started";
 import { Hero } from "@/components/home/hero";
 import { Infrastructure } from "@/components/home/infrastructure";
-import { LogoStrip } from "@/components/home/logo-strip";
 import { Navbar } from "@/components/home/navbar";
 import { PcbBackground } from "@/components/home/pcb-background";
 
@@ -24,7 +23,6 @@ export default function Home() {
         <Features />
         <Infrastructure />
         <GetStarted />
-        <LogoStrip />
         <Footer />
       </div>
     </div>

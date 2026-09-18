@@ -1,15 +1,39 @@
+"use client";
+
 import { ContactIcon } from "@/components/contact/contact-icons";
 import { CONTACTS } from "@/lib/contacts";
 
-export function ContactChannels({ compact = false }: { compact?: boolean }) {
+function openMailClient(href: string) {
+  window.location.href = href;
+}
+
+export function ContactChannels({
+  compact = false,
+  only,
+}: {
+  compact?: boolean;
+  only?: string[];
+}) {
+  const channels = only
+    ? CONTACTS.filter((channel) => only.includes(channel.id))
+    : CONTACTS;
+
   return (
     <div className={`contact-list${compact ? " is-compact" : ""}`}>
-      {CONTACTS.map((channel) => (
+      {channels.map((channel) => (
         <a
           key={channel.id}
           className="contact-row"
           href={channel.href}
           {...(channel.external ? { target: "_blank", rel: "noreferrer" } : undefined)}
+          {...(channel.id === "email"
+            ? {
+                onClick: (event) => {
+                  event.preventDefault();
+                  openMailClient(channel.href);
+                },
+              }
+            : undefined)}
         >
           <span className="contact-icon">
             <ContactIcon id={channel.id} />

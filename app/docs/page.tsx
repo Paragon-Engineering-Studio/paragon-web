@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { ContactExperience } from "@/components/contact/contact-experience";
+import { DocsExperience } from "@/components/docs/docs-experience";
 import { Footer } from "@/components/home/footer";
 import { Navbar } from "@/components/home/navbar";
 import { SoftMist } from "@/components/soft-mist";
 
 export const metadata: Metadata = {
-  title: "Contact — PARAGON",
-  description:
-    "Write PARAGON — email the studio or find us on GitHub.",
+  title: "Docs — PARAGON",
+  description: "PARAGON documentation — guides and references from the engineering studio.",
 };
 
-export default function ContactPage() {
+export default function DocsPage() {
   return (
     <div
       style={{
@@ -23,7 +22,7 @@ export default function ContactPage() {
       <SoftMist />
       <div className="site-fg" style={{ position: "relative", zIndex: 1 }}>
         <Navbar />
-        <ContactExperience />
+        <DocsExperience />
         <Footer />
       </div>
     </div>
