@@ -17,6 +17,13 @@ export const metadata: Metadata = {
   title: "PARAGON — Engineering from silicon to screen",
   description:
     "Showcasing PARAGON's expertise in web development, PCB design, embedded systems, and automation, this streamlined homepage delivers essential information with clarity.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
   robots: {
     index: false,
     follow: false,
