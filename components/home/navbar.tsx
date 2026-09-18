@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ParagonWordmark } from "@/components/brand/paragon-wordmark";
+import { MobileMenu } from "@/components/home/mobile-menu";
 import { NavLinks } from "@/components/home/nav-links";
 import { ProjectSearch } from "@/components/home/project-search";
 
@@ -13,30 +14,14 @@ export function Navbar() {
         background: "rgba(8,8,8,0.96)",
         backdropFilter: "blur(16px)",
         borderBottom: "1px solid rgba(255,255,255,0.07)",
+        overflow: "visible",
       }}
     >
-      <div
-        style={{
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "0 24px",
-          height: 60,
-          display: "flex",
-          alignItems: "center",
-          gap: 32,
-        }}
-      >
+      <div className="site-header-bar">
         <Link
           href="/"
           aria-label="PARAGON engineering studio"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-            textDecoration: "none",
-            flexShrink: 0,
-            color: "#fff",
-          }}
+          className="site-logo"
         >
           <span
             style={{
@@ -62,9 +47,10 @@ export function Navbar() {
 
         <NavLinks />
 
-        <div style={{ display: "flex", alignItems: "center", marginLeft: 24 }}>
+        <div className="site-header-tools">
           <ProjectSearch />
         </div>
+        <MobileMenu />
       </div>
       <div
         style={{

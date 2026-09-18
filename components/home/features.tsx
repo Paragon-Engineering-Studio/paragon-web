@@ -75,14 +75,7 @@ export function Features() {
         </h2>
       </div>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: 1,
-          border: "1px solid rgba(255,255,255,0.07)",
-        }}
-      >
+      <div className="feature-grid">
         {FEATURES.map((f) => (
           <div
             key={f.title}

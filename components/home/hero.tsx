@@ -3,6 +3,7 @@ import { Reveal } from "@/components/reveal";
 export function Hero() {
   return (
     <Reveal
+      className="home-hero"
       style={{
         padding: "100px 24px 80px",
         textAlign: "center",
@@ -38,7 +39,7 @@ export function Hero() {
         the stack, precision-engineered.
       </p>
 
-      <div style={{ display: "flex", justifyContent: "center", gap: 12 }}>
+      <div className="hero-actions">
         <a href="#get-started" className="btn-hero-solid">
           Start a project →
         </a>

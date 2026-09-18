@@ -15,7 +15,7 @@ const INTEGRATIONS = [
 
 function StackedMockup() {
   return (
-    <div style={{ position: "relative", width: 380, height: 280, margin: "0 auto", maxWidth: "100%" }}>
+    <div className="started-mockup">
       <div
         style={{
           position: "absolute",
@@ -172,7 +172,7 @@ function StackedMockup() {
 export function GetStarted() {
   return (
     <Reveal id="get-started" style={{ padding: "80px 24px" }}>
-      <div className="panel-box card-hover" style={{ padding: "48px 40px" }}>
+      <div className="panel-box card-hover started-panel">
         <div className="started-grid">
           <div>
             <p
